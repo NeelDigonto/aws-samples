@@ -1,11 +1,10 @@
-import express from 'express';
+import { config } from 'dotenv';
+config();
 
-const app = express();
+import { s3 } from './lib/s3.js';
 
-app.get('/', (_req, res) => {
-  res.send('Hello World!');
-});
+//s3.test.getObject();
+//s3.test.putObject();
 
-app.listen(5000, () => {
-  console.log('Listening on port 5000');
-});
+//s3.test.getPresignedGetUrl();
+//s3.test.getPresignedPostUrl();
